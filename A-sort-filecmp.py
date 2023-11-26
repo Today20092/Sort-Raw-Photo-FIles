@@ -17,6 +17,10 @@ for path, directories, files in os.walk(local_folder):
                 file_are_equal = filecmp.cmp(local_raw_file, camera_raw_file)
 
                 if files_are_equal:
-                        print(f"The files {local_raw_file} and {camera_raw_file} are identical.")
-                    else:
-                        print(f"The files {local_raw_file} and {camera_raw_file} are different.")
+                    print(
+                        f"The files {local_raw_file} and {camera_raw_file} are identical."
+                    )
+                else:
+                    print(
+                        f"The files {local_raw_file} and {camera_raw_file} are different."
+                    )
