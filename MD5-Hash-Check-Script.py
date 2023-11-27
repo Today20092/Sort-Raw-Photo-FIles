@@ -21,7 +21,7 @@ for path, directories, files in os.walk(camera_folder):
 
         # Converting all the content of our file into md5 hash. rb means read binary, meaning it will read its content and it is not affeced by the title.
         Hash_file = hashlib.md5(open(file_path, "rb").read()).hexdigest()
-        print(f"The hash is: {Hash_file}")
+        print(f"The hash is: {Hash_file}\n")
 
         # this section adds each file path & its has to the dictionary and if it finds the same hash_file [hexidecmial] in the dictionary it then says it is a duplicate
         if Hash_file not in unique_files_on_camera:
@@ -29,4 +29,4 @@ for path, directories, files in os.walk(camera_folder):
                 Hash_file
             ] = file_path  # the has file is the hexidecmial key, and it is now assoicated with the file path. basically a dictionary.
         else:
-            print(f"{file_path} is a DUPLICATE!!!!")
+            print(f"{file_path} is a DUPLICATE!!!!\n")
